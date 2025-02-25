@@ -1,5 +1,3 @@
-Here's the simplified **`README.md`** with just the project info:
-
 # 🟢 Keep Alive Script
 
 A Node.js script designed to send periodic POST requests to a FastAPI endpoint, ensuring continuous uptime.
