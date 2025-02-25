@@ -27,9 +27,15 @@ const login = async () => {
 };
 
 // Send Request to FastAPI
+// Send Request to FastAPI
 const sendRequest = async (token) => {
   try {
-    console.log("🚀 Sending Request To AI...");
+    const currentTimeIST = new Date().toLocaleString("en-IN", {
+      timeZone: "Asia/Kolkata",
+      hour12: true,
+    });
+
+    console.log(`🚀 Sending Request To AI at ${currentTimeIST}...`);
     const response = await axios.post(
       fastApiUrl,
       {
