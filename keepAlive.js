@@ -58,9 +58,9 @@ const keepAlive = async () => {
   console.log("✅ Cycle Complete...");
 };
 
-// Run every 2 minutes
+// Run every 3 minutes
 keepAlive();
-setInterval(keepAlive, 2 * 60 * 1000); // 2 minutes
+setInterval(keepAlive, 3 * 60 * 1000); // 2 minutes
 
 // Health Check Route for UptimeRobot
 app.get("/", (req, res) => {
