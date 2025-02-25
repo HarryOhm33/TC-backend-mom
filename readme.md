@@ -1,6 +1,5 @@
 Here's the simplified **`README.md`** with just the project info:
 
-```markdown
 # 🟢 Keep Alive Script
 
 A Node.js script designed to send periodic POST requests to a FastAPI endpoint, ensuring continuous uptime.
@@ -15,6 +14,5 @@ A Node.js script designed to send periodic POST requests to a FastAPI endpoint, 
 ---
 
 🚀 **Keeps your services alive and running 24/7!**
-```
 
 Let me know if you need any changes! 🚀
