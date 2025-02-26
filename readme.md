@@ -2,22 +2,18 @@
 
 A Node.js script designed to send periodic POST requests to a FastAPI endpoint, ensuring continuous uptime.
 
-## ⚙️ Tech Stack
-
-- **Node.js**
-- **Axios** – For making HTTP requests
-- **dotenv** – For managing environment variables
-- **PM2** – For process management and keeping the script running
-
-🚀 Keeps your services alive and running 24/7!
-
 ## 🌐 Hosted on Google Cloud
 
 ### 🛠 Steps to Deploy on Google Cloud
 
 1. **Go to Google Cloud Console**: [https://console.cloud.google.com](https://console.cloud.google.com)
 2. **Navigate to Compute Engine → VM Instances**.
-3. **Click on your instance** where you want to deploy the script.
+3. **Create a new VM instance**:
+   - Click **Create Instance**.
+   - Choose **E2-micro** (eligible for free tier).
+   - Select **Ubuntu 22.04 LTS** as the OS.
+   - Allow HTTP traffic.
+   - Click **Create** and wait for the instance to start.
 4. **Connect to the VM** via SSH by clicking the "SSH" button.
 5. **Update and install dependencies**:
    ```sh
@@ -49,16 +45,13 @@ A Node.js script designed to send periodic POST requests to a FastAPI endpoint, 
    pm2 start keepAlive.js --name keepAlive
    pm2 save
    ```
-10. **Check script logs**:
+10. **To restart or update**:
     ```sh
-    pm2 logs keepAlive
-    ```
-11. **To pull updates and restart**:
-    ```sh
-    cd keep-alive
-    git pull origin main
-    npm install
     pm2 restart keepAlive || pm2 start keepAlive.js --name keepAlive
     ```
 
 Your Keep Alive script is now running continuously on Google Cloud! 🚀
+
+### ⚠️ Note on Render Free Tier
+
+Render provides **750 hours of free-tier uptime per month**, which equals **31 days** of continuous usage. However, if you're running **multiple services** under the same account, the hours get split. To maximize uptime, consider using **separate Render accounts** for different services.
