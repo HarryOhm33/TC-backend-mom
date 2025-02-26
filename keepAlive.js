@@ -71,6 +71,7 @@ setInterval(keepAlive, 3 * 60 * 1000); // 2 minutes
 // Health Check Route for UptimeRobot
 app.get("/", (req, res) => {
   res.send("🚀 Keep-Alive Script is Running");
+  console.log("External Ping Detected!!");
 });
 
 app.listen(PORT, "0.0.0.0", () =>
